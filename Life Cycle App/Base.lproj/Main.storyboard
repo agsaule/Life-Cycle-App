@@ -1,24 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bfe-rn-GHp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--FirstVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="FirstVC" id="BYZ-38-t0r" customClass="FirstVC" customModule="LifeCycleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w95-nQ-Frp">
+                                <rect key="frame" x="148" y="433" width="118" height="30"/>
+                                <state key="normal" title="Open Second VC">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3SZ-aR-QiD" kind="show" identifier="GoToSecoandVC" id="knj-TP-VNp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82239053088690306" green="0.87170684677136068" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w95-nQ-Frp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EZK-od-50e"/>
+                            <constraint firstItem="w95-nQ-Frp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jBh-G3-Fo6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="FirstVC" id="VLV-s5-Yjb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="112.5"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="pKR-x6-2GM">
+            <objects>
+                <viewController title="SecondVC" id="3SZ-aR-QiD" customClass="SecondVC" customModule="LifeCycleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aWZ-MR-4h1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRO-uD-aJa">
+                                <rect key="frame" x="156.5" y="433" width="101" height="30"/>
+                                <state key="normal" title="Open Third VC">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="10l-cl-bHl" kind="show" id="afZ-kj-3yP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.90590255648726947" blue="0.91443631236291556" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eRO-uD-aJa" firstAttribute="centerY" secondItem="aWZ-MR-4h1" secondAttribute="centerY" id="9cu-fp-0NQ"/>
+                            <constraint firstItem="eRO-uD-aJa" firstAttribute="centerX" secondItem="aWZ-MR-4h1" secondAttribute="centerX" id="hQW-W6-WFx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y4Z-FD-tNs"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Second VC" id="Lif-5q-GVw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QbU-w6-KpH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="113"/>
+        </scene>
+        <!--ThirdVC-->
+        <scene sceneID="vfP-0b-hAx">
+            <objects>
+                <viewController title="ThirdVC" id="10l-cl-bHl" customClass="ThirdVC" customModule="LifeCycleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OaC-0k-hiy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEs-GW-UuN">
+                                <rect key="frame" x="175.5" y="433" width="63" height="30"/>
+                                <state key="normal" title="Close VC">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonTapped:" destination="10l-cl-bHl" eventType="touchUpInside" id="e9b-hr-PQF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99398742525650297" green="0.95187289861066349" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LEs-GW-UuN" firstAttribute="centerY" secondItem="OaC-0k-hiy" secondAttribute="centerY" id="AOk-IE-lXe"/>
+                            <constraint firstItem="LEs-GW-UuN" firstAttribute="centerX" secondItem="OaC-0k-hiy" secondAttribute="centerX" id="VLl-M5-Jao"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EC5-ZN-xhh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Third VC" id="AlC-aB-bko"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fd2-Ts-zyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2674" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lsJ-AJ-Jky">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bfe-rn-GHp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fwt-Tg-Znz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="38h-5r-hyo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Xa-RB-FGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
 </document>
